@@ -44,12 +44,78 @@ int main(void){
 
     printf("\nO resto da divisao = %d.\n", resto);
 
+    //5. Área do círculo
+
     int raio = 4;
     float pi = 3.14;
     
-    float area = raio * pi;
+    float area = raio * raio * pi;
 
     printf("\nA area da circunferencia = %f", area);
+
+    //6. Idade
+
+    int idade = 18;
+
+    int dias_vividos = idade * 365;
+
+    printf("\nTotal de dias vividos: %d", dias_vividos);
+
+    //7. Sinal
+
+    int num = -15;
+
+    if (num < 0) {
+        printf("\nO numero %d e negativo!", num);
+    }
+    else if (num > 0){
+        printf("\nO numero %d e positivo!", num);
+    }
+    else{
+        printf("\nO numero %d e zero!", num);
+    }
+
+    //8. Maior e menor
+
+    int num_1 = 26;
+    int num_2 = 12;
+
+    if (num_1 > num_2){
+        printf("\nO numero %d e maior que o numero %d", num_1, num_2);
+    }
+    else if (num_1 < num_2){
+        printf("\nO numero %d e maior que o numero %d", num_2, num_1);
+    }
+    else{
+        printf("\nOs números são iguais!");
+    }
+
+    //9. Média
+
+    int nota_1 = 100;
+    int nota_2 = 89;
+    int nota_3 = 73;
+
+    float media = (nota_1+nota_2+nota_3)/3;
+
+    if(media>=7){
+        printf()
+    }
+
+    printf("\nA media de sua nota e: %d", media);
+
+
+    int contador = 0;
+
+    printf("\n\nNumeros de 1 a 100:\n");
+    while (contador < 101){
+        printf("%d\n", contador);
+        contador++;
+    }
+
+
+
+    return 0;
 
 }
 
