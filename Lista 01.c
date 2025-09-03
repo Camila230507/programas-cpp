@@ -1,6 +1,5 @@
 #include<stdio.h>
-
-#define MAX 256
+#include<string.h>
 
 int main(void){
 
@@ -219,25 +218,52 @@ int main(void){
         printf("A sua temperatura convertida e: %f", (temperatura_numerica-32)/1.8);
     }
 
+
     //15. Escrita inversa
 
-    char frase[MAX];
-    int k = 0, tamanho = 0;
+    printf("\n");
+
+    char frase15[50];
 
     printf("Digite uma frase: ");
-    fgets(frase, MAX, stdin);
+    fgets(frase15, sizeof(frase15), stdin);
+    getchar();
+    int tamanho15 = strlen(frase15);
 
-    // descobrir tamanho "na unha"
-    while (frase[tamanho] != '\0' && frase[tamanho] != '\n') {
-        tamanho++;
-    }
-
-    // imprimir de trás pra frente
     printf("Frase invertida: ");
-    for (k = tamanho - 1; k >= 0; k--) {
-        printf("%c", frase[k]);
+    for (tamanho15 = strlen(frase15) - 1; tamanho15 >=0; tamanho15--) {
+        printf("%c", frase15[tamanho15]);
     }
     printf("\n");
+
+
+    //16. Tabuleiro
+    
+
+    printf("\n");
+
+
+    char tabuleiro[8][8];
+
+    int i16, j16;
+    
+    for (i16 = 0; i16 < 8; i16++) {
+        for (j16 = 0; j16 < 8; j16++) {
+            if ((i16 + j16) % 2 == 0)
+                tabuleiro[i16][j16] = '#';
+            else
+                tabuleiro[i16][j16] = ' ';
+        }
+    }
+
+
+    for (i16 = 0; i16 < 8; i16++) {
+        for (j16 = 0; j16 < 8; j16++) {
+            printf("%c ", tabuleiro[i16][j16]);
+        }
+        printf("\n");
+    }
+
 
     return 0;
 }
